@@ -61,6 +61,7 @@ class JeemaCoder extends React.Component {
                     <button type="submit" class onClick={this.AjouterEtudiants}>Ajouter</button>
                 </form>
                 <table>
+
                     <thead>
                         <tr>
                             <th>Prénom</th>
@@ -69,7 +70,9 @@ class JeemaCoder extends React.Component {
                             <th>Téléphone</th>
                         </tr>
                     </thead>
+
                     <tbody>
+
                         {this.state.students.map((student, index) => (
                             <tr key={index}>
                                 <td>{student.prenom}</td>
@@ -77,7 +80,9 @@ class JeemaCoder extends React.Component {
                                 <td>{student.email}</td>
                                 <td>{student.tel}</td>
                             </tr>
-                        ))}
+                        ))
+                        }
+
                     </tbody>
                 </table>
             </div>
